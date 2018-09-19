@@ -18,7 +18,7 @@ class LaravelXssServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('Anspectoryno/laravel-xss');
+		$this->register('Anspectoryno/laravel-xss');
 	}
 
 	/**
