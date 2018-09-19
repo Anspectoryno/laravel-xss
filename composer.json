@@ -1,5 +1,5 @@
 {
-    "name": "anspectoryno/laravel-xss",
+    "name": "Anspectoryno/laravel-xss",
     "description": "",
     "authors": [
         {
@@ -19,5 +19,5 @@
             "Anspectoryno\\LaravelXss": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
