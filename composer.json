@@ -3,8 +3,8 @@
     "description": "",
     "authors": [
         {
-            "name": "Vlatko Gjurgjinoski",
-            "email": "vlatko@g6solutions.com"
+            "name": "anspectoryno",
+            "email": "ikot3g@gmail.com"
         }
     ],
     "require": {
@@ -16,7 +16,7 @@
             "src/migrations"
         ],
         "psr-0": {
-            "Gvlatko\\LaravelXss": "src/"
+            "Anspectoryno\\LaravelXss": "src/"
         }
     },
     "minimum-stability": "stable"
