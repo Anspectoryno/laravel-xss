@@ -1,4 +1,4 @@
-<?php namespace Gvlatko\LaravelXss;
+<?php namespace Anspectoryno\LaravelXss;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class LaravelXssServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('gvlatko/laravel-xss');
+		$this->package('Anspectoryno/laravel-xss');
 	}
 
 	/**
@@ -30,7 +30,7 @@ class LaravelXssServiceProvider extends ServiceProvider {
 	{
 		$this->app->singleton('xss', function()
 		{
-			return new \Gvlatko\LaravelXss\Xss;
+			return new \Anspectoryno\LaravelXss\Xss;
 		});
 
 	}

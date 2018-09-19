@@ -1,6 +1,6 @@
 <?php
 
-namespace Gvlatko\LaravelXss;
+namespace Anspectoryno\LaravelXss;
 
 /**
  *
