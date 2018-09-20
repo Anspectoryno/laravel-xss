@@ -9,7 +9,7 @@ Installation
 Include the package in your composer file
 
     "require": {
-        "anspectoryno/laravel-xss": "dev-master"
+        "Anspectoryno/laravel-xss": "dev-master"
     }
     
 
@@ -17,11 +17,11 @@ Run composer update
 
 Add the service provider in you app.php config file in the 'providers' array
 
-    'Anspectoryno\LaravelXss\LaravelXssServiceProvider'
+    Anspectoryno\LaravelXss\LaravelXssServiceProvider::class
 
 and add the alies also in the app.php config file in the 'aliases' array
 
-    'Xss'			  => 'Anspectoryno\LaravelXss\LaravelXssFacade'
+    'Xss'			  => Anspectoryno\LaravelXss\LaravelXssFacade::class
 
 
 Usage
