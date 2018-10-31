@@ -29,7 +29,7 @@ Usage
 
 Use the Xss::clean($str, $is_image = FALSE) to clean user input. For example:
 
-    $cleaned = Xss::clean(Input::get('comment');
+    $cleaned = Xss::clean(Input::get('comment'));
 
 or for use with images
 
