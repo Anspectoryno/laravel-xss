@@ -296,7 +296,7 @@ class Xss {
 		 * So this: <blink>
 		 * Becomes: &lt;blink&gt;
 		 */
-		$naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|style|script|textarea|title|video|xml|xss';
+		$naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|script|textarea|title|video|xml|xss';
 		$str = preg_replace_callback('#<(/*\s*)('.$naughty.')([^><]*)([><]*)#is', array($this, '_sanitize_naughty_html'), $str);
 
 		/*
@@ -394,8 +394,8 @@ class Xss {
 			$matches = $matches1 = 0;
 
 			$str = html_entity_decode($str, ENT_COMPAT, $charset);
-			$str = preg_replace('~&#x(0*[0-9a-f]{2,5})~ei', 'chr(hexdec("\\1"))', $str, -1, $matches);
-			$str = preg_replace('~&#([0-9]{2,4})~e', 'chr(\\1)', $str, -1, $matches1);
+			$str = preg_replace('~&#x(0*[0-9a-f]{2,5})~i', 'chr(hexdec("\\1"))', $str, -1, $matches);
+			$str = preg_replace('~&#([0-9]{2,4})~', 'chr(\\1)', $str, -1, $matches1);
 		}
 		while ($matches OR $matches1);
 
@@ -489,7 +489,7 @@ class Xss {
 	protected function _remove_evil_attributes($str, $is_image)
 	{
 		// All javascript event handlers (e.g. onload, onclick, onmouseover), style, and xmlns
-		$evil_attributes = array('on\w*', 'style', 'xmlns', 'formaction');
+		$evil_attributes = array('on\w*', 'xmlns', 'formaction');
 
 		if ($is_image === TRUE)
 		{
